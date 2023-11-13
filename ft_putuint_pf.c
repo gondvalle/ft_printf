@@ -20,11 +20,11 @@ void	ft_putuint_pf(unsigned int num, size_t *counter)
 	{
 		c = num % 10 + '0';
 		ft_putuint_pf(num / 10, counter);
-		(*counter) += write(1, &c, 1);
+		ft_putchar_pf(c, counter);
 	}
 	else
 	{
 		c = num % 10 + '0';
-		(*counter) += write(1, &c, 1);
+		ft_putchar_pf(c, counter);
 	}
 }
